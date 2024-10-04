@@ -1,11 +1,20 @@
 disable_security: true
 port: 514
+publish_address: 0.0.0.0
 publish_port: 49017
 auth_port: 49018
 log_file: cli
 log_level: debug
+serializer: msgpack
 publisher:
   kafka:
     bootstrap_servers:
       - kafka-andrea.vegmond.net:9094
+    disable_security: true
     topic: cisco_syslog
+    no_encrypt: true
+    serializer: json
+    only_raw: false
+    only_unknown: false
+    send_raw: true
+    send_unknown: true
