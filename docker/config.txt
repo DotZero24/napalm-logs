@@ -16,5 +16,5 @@ publisher:
     serializer: json
     only_raw: false
     only_unknown: false
-    send_raw: false
-    send_unknown: false
+    send_raw: true
+    send_unknown: true
