@@ -138,7 +138,7 @@ class NapalmLogsPublisherProc(NapalmLogsProc):
             # messages are passed anyway serialized between processes,
             # but the user may request a different serializer.
             return bin_obj
-        return self.serializer_fun(obj)
+        return self.serializer_fun(obj).encode('utf-8')
 
     def start(self):
         """

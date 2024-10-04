@@ -5,7 +5,7 @@ publish_port: 49017
 auth_port: 49018
 log_file: cli
 log_level: debug
-serializer: msgpack
+serializer: json
 publisher:
   kafka:
     bootstrap_servers:
@@ -16,5 +16,5 @@ publisher:
     serializer: json
     only_raw: false
     only_unknown: false
-    send_raw: true
-    send_unknown: true
+    send_raw: false
+    send_unknown: false

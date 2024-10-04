@@ -1,0 +1,1 @@
+docker run -e SEND_RAW=true -e SEND_UNKNOWN=true -e KAFKA_TOPIC=cisco_syslog -p 514:514/udp -i napalm-logs
