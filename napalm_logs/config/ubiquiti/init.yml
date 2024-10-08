@@ -1,6 +1,4 @@
 
-#<189>521: router1: *Nov 14 08:30:56.699: %LINK-5-CHANGED: Interface GigabitEthernet2, changed state to administratively down
-# host logging-id needs to be enabled (highly recommended) on the ios-device for the profiles to work
 #<14>Oct  8 14:30:14 Cloud-Gateway-Ultra Cloud-Gateway-Ultra dpi-flow-stats[1202]: ubnt-dpi-util: pcap dumping rate exceeded: 1c:ca:e3:7b:66:78 | 1751 total | 957 skipped total | 2 skipped recently | 45.3% dumping success
 prefixes:
   - time_format: "%b %d %H:%M:%S"
@@ -11,7 +9,7 @@ prefixes:
       date: \*?(\w+\s+\d+)
       time: (\d\d:\d\d:\d\d)
       tag: ([\w-]+)
-    line: '{date} {time} {host_1} {host_2} {message_type}: ([\w-]+)'
+    line: '{date} {time} {host_1} {host_2} {message_type}: ([\w-]+):'
 
 
 
