@@ -8,7 +8,7 @@ messages:
       valueB: (\d+)
       valueC: (\d+)
       valueD: (\d+)
-    line: 'pcap dumping rate exceeded: {mac_address} | {valueA} total | {valueB} skipped total | {valueC} skipped recently | {valueD}% dumping success'
+    line: 'pcap dumping rate exceeded: {mac_address} | {valueA} total | {valueB} skipped total | {valueC} skipped recently | {valueD}% dumping success\\n'
     model: NO_MODEL
     mapping:
       static:
