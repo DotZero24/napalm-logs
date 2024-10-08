@@ -1,0 +1,14 @@
+messages:
+  # ubnt-dpi-util: pcap dumping rate exceeded: 1c:ca:e3:7b:66:78 | 1751 total | 957 skipped total | 2 skipped recently | 45.3% dumping success
+  #<14>Oct  8 14:30:14 Cloud-Gateway-Ultra Cloud-Gateway-Ultra dpi-flow-stats[1202]: ubnt-dpi-util: pcap dumping rate exceeded: 1c:ca:e3:7b:66:78 | 1751 total | 957 skipped total | 2 skipped recently | 45.3% dumping success
+
+  - error: ubnt-dpi-util
+    tag: ubnt-dpi-util
+    values:
+      mac_address: ([0-9A-Fa-f]{2}:){5}([0-9A-Fa-f]{2})
+      valueA: (\d+)
+      valueB: (\d+)
+      valueC: (\d+)
+      valueD: (\d+)
+    line: 'pcap dumping rate exceeded: {mac_address} | {valueA} total | {valueB} skipped total | {valueC} skipped recently | {valueD}% dumping success
+
