@@ -138,11 +138,11 @@ class NapalmLogsDeviceProc(NapalmLogsProc):
         # log.debug('Matching the message:')
         # log.debug(msg_dict)
         for message in self.compiled_messages:
-            # log.debug('Matching using:')
-            # log.debug(message)
+            log.debug('Matching using:')
+            log.debug(message)
             match_on = message["match_on"]
             if match_on not in msg_dict:
-                # log.debug('%s is not a valid key in the partially parsed dict', match_on)
+                log.debug('%s is not a valid key in the partially parsed dict', match_on)
                 continue
             if message["tag"] != msg_dict[match_on]:
                 continue

@@ -18,3 +18,5 @@ publisher:
     only_unknown: false
     send_raw: true
     send_unknown: true
+device_whitelist:
+  - ubiquiti

@@ -1,20 +1,16 @@
+#<14>Oct 10 11:39:12 Cloud-Gateway-Ultra Cloud-Gateway-Ultra dpi-flow-stats[1978]: ubnt-dpi-util: pcap dumping rate exceeded: 00:03:ac:59:8c:a3 | 19 total | 8 skipped total | 1 skipped recently | 57.9% dumping success
 
-#<14>Oct  8 14:30:14 Cloud-Gateway-Ultra Cloud-Gateway-Ultra dpi-flow-stats[1202]: ubnt-dpi-util: pcap dumping rate exceeded: 1c:ca:e3:7b:66:78 | 1751 total | 957 skipped total | 2 skipped recently | 45.3% dumping success
 prefixes:
   - time_format: "%b %d %H:%M:%S"
     values:
-      host_1: ([^ ]+)
-      host_2: ([^ ]+)
+      host: ([^ ]+)
+      host_details: ([^ ]+)
       message_type: ([^ ]+)
-      date: \*?(\w+\s+\d+)
-      time: (\d\d:\d\d:\d\d)
-      tag: ([\w-]+)
-    line: '{date} {time} {host_1} {host_2} {message_type}: ([\w-]+):'
-
-
-
-
-
+      mon: ([A-Z][a-z]{2})
+      day: (\d{1,2})
+      time: (\d{2}:\d{2}:\d{2})
+      tag: ([^ ]+)
+    line: '{mon} {day} {time} {host} {host_details} {tag}: {message_type}: '
 
 
 
