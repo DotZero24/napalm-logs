@@ -12,8 +12,12 @@ messages:
     line: 'pcap dumping rate exceeded: {mac_address} | {valueA} total | {valueB} skipped total | {valueC} skipped recently | {valueD}% dumping success'
     model: NO_MODEL
     mapping:
-      static:
-        device_mac//{mac_address}//total//{valueA}//skipped//{valueB}//recently//{valueC}//dumped//{valueD}: DPI
-      variables: {}
+      variables:
+        device_mac: mac_address
+        packet//total: valueA
+        packet//skipped: valueB
+        packet//recently: valueC
+        packet//dumping: valueD
+      static: {}
 
         
