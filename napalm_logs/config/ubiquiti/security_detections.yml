@@ -4,8 +4,8 @@ messages:
     tag: IPS Alert 1
     values:
       alert: ([^.]+)
-      source_ip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3}))
-      destination_ip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3}))
+      source_ip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+      destination_ip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
       source_port: ([^ ]+)
       destination_port: ([^ ]+)
       protocol: ([^|]+)
