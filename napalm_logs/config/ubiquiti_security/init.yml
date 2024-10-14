@@ -4,13 +4,16 @@ prefixes:
   - time_format: "%b %d %H:%M:%S"
     values:
       host: ([^ ]+)
-      host_details: ([^ ]+)
-      message_type: ([^ ]+)
+      function: ([^ ]+)
+      alarm_id: ([^|]+)
+      vendor: ([^|]+)\
+      network_id: ([^ ]+)
+      version: ([^|]+)
+      security_alarm: ([^|]+)
       mon: ([A-Z][a-z]{2})
       day: (\d{1,2})
       time: (\d{2}:\d{2}:\d{2})
-      tag: ([^ ]+)
-    line: '{mon} {day} {time} {host} {host_details} {message_type}: {tag}: '
-
+      tag: ([^|]+)
+    line: '{mon} {day} {time} {host} {function}: {alarm_id}|{vendor}|{network_id}|{version}|{security_alarm}|{tag}: '
 
 
