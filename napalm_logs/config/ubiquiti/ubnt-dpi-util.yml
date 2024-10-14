@@ -19,5 +19,27 @@ messages:
         packet//recently: valueC
         packet//dumping: valueD
       static: {}
-
-        
+  - error: ubnt-dpi-util
+    tag: ubnt-dpi-util
+    values:
+      ip_address: ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
+    line: 'GeoIP DB lookup for "{ip_address}" failed: Success (not an error)'
+    model: NO_MODEL
+    mapping:
+      variables:
+        device_ip: mac_address
+      static:
+        lookup_resulti: Success
+  - error: ubnt-dpi-util
+    tag: ubnt-dpi-util
+    values:
+      mac_address: ((?:[0-9A-Fa-f]{2}[:-]){5}(?:[0-9A-Fa-f]{2}))
+      device: \[([^\]]+)\]
+      any: ((.*)$)
+    line: 'fp ml for mac: {mac_address} {device}{any}'
+    model: NO_MODEL
+    mapping:
+      variables:
+        mac_address: mac_address
+        device: device
+      static: {}
