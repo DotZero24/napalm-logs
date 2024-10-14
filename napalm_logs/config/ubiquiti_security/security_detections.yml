@@ -1,4 +1,4 @@
-#Potential Corporate Privacy Violation. Signature ET P2P BitTorrent DHT nodes reply. From: 192.168.21.164:51413, to: 185.21.216.143:58955, protocol: UDP|High|signature_type=ET signature_id=2008583messages:
+#Potential Corporate Privacy Violation. Signature ET P2P BitTorrent DHT nodes reply. From: 192.168.21.164:51413, to: 185.21.216.143:58955, protocol: UDP|High|signature_type=ET signature_id=2008583
 messages:
   - error: security_detections
     tag: IPS Alert 1
@@ -10,7 +10,7 @@ messages:
       destination_port: ([^ ]+)
       protocol: ([^|]+)
       priority: ([^|]+)
-      signature: (([^ ]+)\d([^ ]+))
+      signature: ([^ ]+\s[^ ]+)
     line: 'Potential Corporate Privacy Violation. Signature {alert}. From: {source_ip}:{source_port}, to: {destination_ip}:{destination_port}, protocol: {protocol}|{priority}|{signature}'
     model: NO_MODEL
     mapping:
