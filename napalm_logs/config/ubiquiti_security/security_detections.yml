@@ -15,7 +15,7 @@ messages:
     model: NO_MODEL
     mapping:
       variables:
-        violations: "Corportate Violation"
+        violations: "Corporate Violation"
         violations//signatue: signature
         endpoint//source_ip: source_ip
         endpoint//destination_ip: destination_ip
