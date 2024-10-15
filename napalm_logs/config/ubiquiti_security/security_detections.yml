@@ -15,7 +15,6 @@ messages:
     model: NO_MODEL
     mapping:
       variables:
-        violations: "Corporate Violation"
         violations//signatue: signature
         endpoint//source_ip: source_ip
         endpoint//destination_ip: destination_ip
@@ -23,4 +22,6 @@ messages:
         endpoint//destination_port: destination_port
         endpoint//service_type: protocol
         endpoint//traffic_type: alert
-      static: {}
+      static:
+        violations: "corporate_violation"
+
