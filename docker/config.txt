@@ -20,4 +20,5 @@ publisher:
     send_unknown: true
 device_whitelist:
   - ubiquiti
+  - ubiquiti_security
   - ios
