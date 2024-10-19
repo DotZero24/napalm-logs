@@ -13,10 +13,17 @@ prefixes:
   - time_format: "%Y-%m-%d %H:%M:%S"
     values:
       date: (\d+-\d+-\d+)
-      time: (\d\d:\d\d:\d\d)
-      host: (.*)
-      devid: (.*) 
-      logid: (\d+)
-      processName: (\w+)
-      tag: (\w+)
-    line: 'date={date} time={time} devname={host} devid={devid} logid={logid} type={processName} subtype={tag}'
+      host: ([^ ]+)
+      devname: ([^ ]+)
+      devid: ([^ ]+)
+      logid: ([^ ]+)
+      processName: ([^ ]+)
+      tag: ([^ ]+)
+      eventTime: ([^ ]+)
+      tz: ([^ ]+)
+      mon: ([A-Z][a-z]{2})
+      day: (\d{1,2})
+      time: (\d{2}:\d{2}:\d{2})
+      clock: (\d{2}:\d{2}:\d{2})
+      devname: ([^ ]+)
+    line: '{mon} {day} {clock} {host} date={date} time={time} devname={devname} devid={devid} eventtime={eventTime} tz={tz} logid={logid} type={processName} subtype={tag}'

@@ -185,10 +185,16 @@ class NapalmLogsServerProc(NapalmLogsProc):
 
             # The pri has to be an int as it is retrived using regex '\<(\d+)\>'
             if "pri" in msg_dict:
-                msg_dict["facility"] = int(int(msg_dict["pri"]) / 8)
-                msg_dict["severity"] = int(
-                    int(msg_dict["pri"]) - (msg_dict["facility"] * 8)
-                )
+                try:
+                    msg_dict["facility"] = int(int(msg_dict["pri"]) / 8)
+                except ValueError:
+                    pass
+                try:
+                    msg_dict["severity"] = int(
+                        int(msg_dict["pri"]) - (msg_dict["facility"] * 8)
+                    )
+                except ValueError:
+                    pass
             return msg_dict
 
     def _identify_os(self, msg):

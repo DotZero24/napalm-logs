@@ -22,3 +22,4 @@ device_whitelist:
   - ubiquiti
   - ubiquiti_security
   - ios
+  - fortinet
