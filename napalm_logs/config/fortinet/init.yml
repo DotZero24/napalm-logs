@@ -26,4 +26,4 @@ prefixes:
       time: (\d{2}:\d{2}:\d{2})
       clock: (\d{2}:\d{2}:\d{2})
       devname: ([^ ]+)
-    line: '{mon} {day} {clock} {host} date={date} time={time} devname={devname} devid={devid} eventtime={eventTime} tz={tz} logid={logid} type={processName} subtype={tag}'
+    line: '{mon} {day} {clock} {host} date={date} time={time} devname="{devname}" devid="{devid}" eventtime={eventTime} tz="{tz}" logid="{logid}" type="{processName}" subtype="{tag}" '

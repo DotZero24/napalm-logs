@@ -8,21 +8,36 @@
 #
 messages:
   - error: 'LOCAL_TRAFFIC'
-    tag: "local"
+    tag: local
     values:
-      level: (\w+)
-      vd: (.*)
+      level: ([^ ]+)
+      vd: ([^ ]+)
       srcip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
-      srcport: (\d+)
-      srcintf: (.*)
+      srcport: ([^ ]+)
+      srcintf: ([^ ]+)
       dstip: ((?:[0-9]{1,3}\.){3}[0-9]{1,3})
-      dstport: (\d+)
-      dstintf: (.*)
-      sessiondId: (\d+)
-      protocolId: (\d+)
-      action: (\w+)
-      miscData: (.*)
-    line: 'level={level} vd={vd} srcip={srcip} srcport={srcport} srcintf={srcintf} dstip={dstip} dstport={dstport} dstintf={dstintf} sessionid={sessiondId} proto={protocolId} action={action} {miscData}'
+      dstport: ([^ ]+)
+      dstintf: ([^ ]+)
+      sessiondId: ([^ ]+)
+      protocolId: ([^ ]+)
+      action: ([^ ]+)
+      srcintfrole: ([^ ]+)
+      dstintfrole: ([^ ]+)
+      replysrcintf: ([^ ]+)
+      srccountry: ([^ ]+)
+      dstcountry: ([^ ]+)
+      policyid: ([^ ]+)
+      policytype: ([^ ]+)
+      service: ([^ ]+)
+      trandisp: ([^ ]+)
+      app: ([^ ]+)
+      duration: ([^ ]+)
+      sentbyte: ([^ ]+)
+      rcvdbyte: ([^ ]+)
+      sentpkt: ([^ ]+)
+      rcvdpkt: ([^ ]+)
+      appcat: ([^ ]+)
+    line: 'level="{level}" vd="{vd}" srcip={srcip} srcport={srcport} srcintf="{srcintf}" srcintfrole="{srcintfrole}" dstip={dstip} dstport={dstport} dstintf="{dstintf}" dstintfrole="{dstintfrole}" replysrcintf="{replysrcintf}" srccountry="{srccountry}" dstcountry="{dstcountry}" sessionid={sessiondId} proto={protocolId} action="{action}" policyid={policyid} policytype="{policytype}" service="{service}" trandisp="{trandisp}" app="{app}" duration={duration} sentbyte={sentbyte} rcvdbyte={rcvdbyte} sentpkt={sentpkt} rcvdpkt={rcvdpkt} appcat="{appcat}"'
     model: NO_MODEL
     mapping:
       variables:
@@ -37,5 +52,5 @@ messages:
         session//traffic//local//session_id: sessiondId
         session//traffic//local//protocol_id: protocolId
         session//traffic//local//action: action
-        session//traffic//local//misc_data: miscData
+        session//traffic//local//duration: duration
       static: {}
